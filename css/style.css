@@ -1,0 +1,63 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&display=swap");
+/*
+  font-family: 'Pacifico', cursive;
+  font-family: 'Bree Serif', serif;
+*/
+
+body {
+  font-family: "Bree Serif", serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-wrapper {
+  background-color: #6f4037;
+}
+
+.brand-logo {
+  font-family: "Pacifico", cursive;
+  margin-left: 8px;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #6f4037;
+}
+.move {
+  margin-top: 60px;
+  margin-top: 20px;
+}
+
+.parallax-container {
+  min-height: 380px;
+  height: auto;
+}
+.icon-coffee {
+  color: #6f4037;
+}
+
+.footer-color {
+  background: #462822;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #6f4037;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6f4037;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: #462822;
+}
