@@ -10,16 +10,15 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .nav-wrapper {
   background-color: #6f4037;
 }
-
-.brand-logo {
-  font-family: "Pacifico", cursive;
-  margin-left: 8px;
+.fnavbar{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 1px 2px 10px 3px #6f4037;
 }
-
 .slider .indicators .indicator-item.active {
   background-color: #6f4037;
 }
@@ -60,4 +59,112 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   background: #462822;
+}
+/* slide name animation */
+.div{
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.div:first-of-type{
+  animation: appear 6s infinite;
+}
+.div:last-of-type{
+  animation: reveal 6s infinite;
+}
+.div:last-of-type span{
+  font-size: 50px;
+  color: #808000;
+  animation: slide 6s infinite;
+}
+@keyframes appear{
+  0%{opacity: 0;}
+  20%{opacity: 1;}
+  80%{opacity: 1;}
+  100%{opacity: 0;}
+}
+@keyframes slide{
+  0%{margin-left:-800px;}
+  20%{margin-left:-800px;}
+  35%{margin-left:0px;}
+100%{margin-left:0px;}
+}
+@keyframes reveal{
+  0%{opacity: 0; width: 0px;}
+  20%{opacity: 1; width: 0px;}
+  30%{width: 655px;}
+  80%{opacity: 1;}
+  100%{opacity: 0; width: 655px;}
+}
+/* text shimmer */
+.shimmer {
+  font-family: "Pacifico", cursive;
+  font-weight: 300;
+  font-size: 35px;
+  margin: 0 auto;
+  padding: 100px;
+  display: inline;
+  margin-bottom: 0;
+}
+
+.shimmer {
+  text-align: center;
+  color: #c18a5660;
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #222;
+}
+
+@-moz-keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+  100% {
+      background-position: top right;
+  }
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+  100% {
+      background-position: top right;
+  }
+}
+
+@-o-keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+  100% {
+      background-position: top right;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+  100% {
+      background-position: top right;
+  }
 }
